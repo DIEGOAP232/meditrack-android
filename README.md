@@ -120,4 +120,64 @@ Los paquetes principales cumplen las siguientes funciones:
 
 ## 7. Requisitos de desarrollo
 
-Para
+Para trabajar con el proyecto se necesita:
+
+- Windows, Linux o macOS.
+- Android Studio.
+- JDK 21.
+- Android SDK compatible con la configuración del proyecto.
+- Acceso al repositorio del backend para probar las funcionalidades integradas.
+
+## 8. Instalación y ejecución
+
+### Clonar el repositorio
+
+```bash
+git clone https://github.com/DIEGOAP232/meditrack-android.git
+```
+
+### Abrir el proyecto
+
+1. Iniciar Android Studio.
+2. Seleccionar **Open**.
+3. Ubicar la carpeta `meditrack-android`.
+4. Esperar la sincronización de Gradle.
+5. Configurar un emulador Android o conectar un dispositivo físico.
+6. Ejecutar la aplicación.
+
+### Conexión con el backend
+
+La aplicación utiliza Retrofit para comunicarse con los servicios REST de MediTrack.
+
+Para las pruebas locales realizadas con el emulador y el backend ejecutándose en el equipo de desarrollo, se utiliza la configuración de conexión correspondiente al entorno local.
+
+La dirección del servidor debe ajustarse según el entorno de ejecución.
+
+## 9. Repositorios relacionados
+
+El proyecto se organiza en repositorios independientes:
+
+- **Android:** https://github.com/DIEGOAP232/meditrack-android
+- **Backend:** https://github.com/DIEGOAP232/meditrack-backend
+- **Database:** repositorio independiente previsto para scripts y documentación técnica, sin información clínica real.
+
+## 10. Estado del proyecto
+
+MediTrack se encuentra en desarrollo progresivo.
+
+Las funcionalidades integradas se irán ampliando y validando conforme avance la implementación de los módulos móviles y su comunicación con el backend.
+
+## 11. Seguridad y privacidad
+
+Debido a que MediTrack contempla información relacionada con la salud, el proyecto considera la importancia de:
+
+- Proteger la información personal de los pacientes.
+- Gestionar el acceso según los roles de usuario.
+- Evitar la exposición de credenciales y claves privadas.
+- Mantener separadas las responsabilidades entre frontend, backend y base de datos.
+
+No se deben publicar datos médicos reales, credenciales ni archivos de claves privadas en el repositorio.
+
+---
+
+**MediTrack — Tecnología orientada a una atención médica más organizada.**

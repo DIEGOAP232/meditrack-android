@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0FAFD">
+
+    <!-- Encabezado -->
+    <ImageView
+        android:id="@+id/btnVolverFamiliares"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:padding="12dp"
+        android:src="@drawable/outline_arrow_back_24"
+        android:contentDescription="Volver"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvTituloFamiliares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Familiares"
+        android:textColor="#183B70"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/btnVolverFamiliares"
+        app:layout_constraintBottom_toBottomOf="@id/btnVolverFamiliares"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenido desplazable -->
+    <ScrollView
+        android:id="@+id/scrollFamiliares"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnVolverFamiliares"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="Gestiona las personas que pueden\nacompañarte en tu cuidado"
+                android:textColor="#496A9A"
+                android:textSize="14sp" />
+
+            <!-- Familiares vinculados -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="10dp"
+                android:text="Familiares vinculados"
+                android:textColor="#183B70"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Familiar María -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFamiliarMaria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgFamiliarMaria"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@android:color/transparent"
+                        android:clipToOutline="true"
+                        android:contentDescription="Foto de María Pérez"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/perfil" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="María Pérez"
+                            android:textColor="#183B70"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hija"
+                            android:textColor="#7890AB"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Código: 01••••"
+                            android:textColor="#5277A8"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
+                        android:text="Vinculado"
+                        android:textColor="#12A99D"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Familiar Carlos -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardFamiliarCarlos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgFamiliarCarlos"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@android:color/transparent"
+                        android:clipToOutline="true"
+                        android:contentDescription="Foto de Carlos Pérez"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/perfil" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carlos Pérez"
+                            android:textColor="#183B70"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Padre"
+                            android:textColor="#7890AB"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Código: 02••••"
+                            android:textColor="#5277A8"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
+                        android:text="Pendiente"
+                        android:textColor="#B87916"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botón generar código: solo diseño -->
+            <Button
+                android:id="@+id/btnGenerarCodigoVinculacion"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="22dp"
+                android:background="@android:color/transparent"
+                android:elevation="3dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="+  Generar código de vinculación"
+                android:textAllCaps="false"
+                android:textColor="#40BFAA"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Solicitudes pendientes -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Solicitudes pendientes"
+                android:textColor="#183B70"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSolicitudAna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgSolicitudAna"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@android:color/transparent"
+                        android:clipToOutline="true"
+                        android:contentDescription="Foto de Ana López"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/perfil" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ana López"
+                            android:textColor="#183B70"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hermana"
+                            android:textColor="#7890AB"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Botones solo visuales -->
+                    <LinearLayout
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnAceptarSolicitudAna"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:backgroundTint="#2B9C9E"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="0dp"
+                            android:text="Aceptar"
+                            android:textAllCaps="false"
+                            android:textColor="#F2EDED"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/btnRechazarSolicitudAna"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="#BA1010"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="0dp"
+                            android:text="Rechazar"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

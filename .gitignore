@@ -1,0 +1,30 @@
+
+# Configuracion local
+*.iml
+local.properties
+
+# Gradle
+.gradle/
+**/build/
+
+# Android Studio
+.idea/
+
+# Archivos generados
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Claves y certificados privados
+*.jks
+*.keystore
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Modulos ajenos a MediTrack
+/myapplication/
+/t2semana/
